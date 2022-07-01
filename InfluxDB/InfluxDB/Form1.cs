@@ -15,6 +15,8 @@ namespace InfluxDB
     {
         private bool mouseDown;
         private Point lastLocation;
+        private String[] deity = new String[] { "Zeus", "Héra", "Poséidon", "Athéna", "Arès", "Déméter", "Apollon", "Artémis", "Héphaïstos", "Aphrodite", "Hermès", "Hestia", "Dionysos" };
+
 
         public Form1()
         {
@@ -26,6 +28,16 @@ namespace InfluxDB
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            DGVDieux.AllowUserToAddRows = false;
+            DGVDieux.ColumnCount = 3;
+            DGVDieux.RowCount = 6;
+
+            for(int i = 0; i < deity.Length; i++)
+            {
+                
+            }
+
+
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -109,5 +121,9 @@ namespace InfluxDB
         {
             this.Close();
         }
+
+        
+
+        
     }
 }
