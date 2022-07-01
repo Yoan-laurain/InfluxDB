@@ -23,6 +23,10 @@ namespace InfluxDB
             InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
+            pnl_Nav.Height = Btn_Dashboard.Height;
+            pnl_Nav.Top = Btn_Dashboard.Top;
+            pnl_Nav.Left = Btn_Dashboard.Left;
+            Btn_Dashboard.BackColor = Color.FromArgb(46, 51, 73);
             DGVDieux.AllowUserToAddRows = false;
             DGVDieux.ColumnCount = 3;
             DGVDieux.RowCount = 6;
