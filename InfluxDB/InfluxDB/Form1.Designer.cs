@@ -42,7 +42,31 @@ namespace InfluxDB
             this.Close = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.RArrow = new System.Windows.Forms.PictureBox();
-            this.DGVDieux = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.ImageDieux1 = new System.Windows.Forms.PictureBox();
+            this.nomDieu1 = new System.Windows.Forms.Label();
+            this.BtnDieux1 = new System.Windows.Forms.Button();
+            this.BtnDieux3 = new System.Windows.Forms.Button();
+            this.nomDieux3 = new System.Windows.Forms.Label();
+            this.ImageDieux3 = new System.Windows.Forms.PictureBox();
+            this.BtnDieux4 = new System.Windows.Forms.Button();
+            this.NomDieux4 = new System.Windows.Forms.Label();
+            this.ImageDieux4 = new System.Windows.Forms.PictureBox();
+            this.BtnDieux5 = new System.Windows.Forms.Button();
+            this.nomDieux5 = new System.Windows.Forms.Label();
+            this.ImageDieux5 = new System.Windows.Forms.PictureBox();
+            this.BtnDieux6 = new System.Windows.Forms.Button();
+            this.NomDieux6 = new System.Windows.Forms.Label();
+            this.ImageDieux6 = new System.Windows.Forms.PictureBox();
+            this.BtnDieux2 = new System.Windows.Forms.Button();
+            this.nomDieu2 = new System.Windows.Forms.Label();
+            this.ImageDieu2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -52,7 +76,18 @@ namespace InfluxDB
             ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RArrow)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVDieux)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieu2)).BeginInit();
             this.SuspendLayout();
             // 
             // Titre
@@ -101,10 +136,16 @@ namespace InfluxDB
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.panel7);
+            this.splitContainer1.Panel2.Controls.Add(this.panel6);
+            this.splitContainer1.Panel2.Controls.Add(this.panel5);
+            this.splitContainer1.Panel2.Controls.Add(this.panel4);
+            this.splitContainer1.Panel2.Controls.Add(this.panel3);
+            this.splitContainer1.Panel2.Controls.Add(this.panel2);
+            this.splitContainer1.Panel2.Controls.Add(this.textBox1);
             this.splitContainer1.Panel2.Controls.Add(this.Close);
             this.splitContainer1.Panel2.Controls.Add(this.pictureBox2);
             this.splitContainer1.Panel2.Controls.Add(this.RArrow);
-            this.splitContainer1.Panel2.Controls.Add(this.DGVDieux);
             this.splitContainer1.Panel2.Controls.Add(this.Titre);
             this.splitContainer1.Panel2.Click += new System.EventHandler(this.splitContainer1_Panel2_Click);
             this.splitContainer1.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel2_MouseDown);
@@ -144,7 +185,7 @@ namespace InfluxDB
             this.btn_Settings.Name = "btn_Settings";
             this.btn_Settings.Size = new System.Drawing.Size(425, 125);
             this.btn_Settings.TabIndex = 4;
-            this.btn_Settings.Text = "Settings";
+            this.btn_Settings.Text = "Paramètres";
             this.btn_Settings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Settings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_Settings.UseVisualStyleBackColor = true;
@@ -163,7 +204,7 @@ namespace InfluxDB
             this.btn_Stat.Name = "btn_Stat";
             this.btn_Stat.Size = new System.Drawing.Size(425, 125);
             this.btn_Stat.TabIndex = 3;
-            this.btn_Stat.Text = "Statistics";
+            this.btn_Stat.Text = "Statistiques";
             this.btn_Stat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_Stat.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btn_Stat.UseVisualStyleBackColor = true;
@@ -182,7 +223,7 @@ namespace InfluxDB
             this.Btn_Dashboard.Name = "Btn_Dashboard";
             this.Btn_Dashboard.Size = new System.Drawing.Size(425, 125);
             this.Btn_Dashboard.TabIndex = 2;
-            this.Btn_Dashboard.Text = "DashBoard";
+            this.Btn_Dashboard.Text = "Liste de dieux";
             this.Btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Btn_Dashboard.UseVisualStyleBackColor = true;
@@ -215,7 +256,7 @@ namespace InfluxDB
             this.Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Close.BackgroundImage")));
             this.Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.Location = new System.Drawing.Point(799, 23);
+            this.Close.Location = new System.Drawing.Point(799, 36);
             this.Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Close.Name = "Close";
             this.Close.Size = new System.Drawing.Size(21, 26);
@@ -230,7 +271,7 @@ namespace InfluxDB
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(33, 397);
+            this.pictureBox2.Location = new System.Drawing.Point(33, 385);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(39, 42);
@@ -245,7 +286,7 @@ namespace InfluxDB
             this.RArrow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RArrow.BackgroundImage")));
             this.RArrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RArrow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RArrow.Location = new System.Drawing.Point(781, 397);
+            this.RArrow.Location = new System.Drawing.Point(799, 385);
             this.RArrow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.RArrow.Name = "RArrow";
             this.RArrow.Size = new System.Drawing.Size(39, 42);
@@ -255,17 +296,308 @@ namespace InfluxDB
             this.RArrow.MouseEnter += new System.EventHandler(this.RArrow_MouseEnter);
             this.RArrow.MouseLeave += new System.EventHandler(this.RArrow_MouseLeave);
             // 
-            // DGVDieux
+            // textBox1
             // 
-            this.DGVDieux.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.DGVDieux.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVDieux.Location = new System.Drawing.Point(33, 135);
-            this.DGVDieux.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.DGVDieux.Name = "DGVDieux";
-            this.DGVDieux.RowHeadersWidth = 51;
-            this.DGVDieux.RowTemplate.Height = 24;
-            this.DGVDieux.Size = new System.Drawing.Size(787, 559);
-            this.DGVDieux.TabIndex = 1;
+            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(79)))), ((int)(((byte)(99)))));
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Myanmar Text", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.textBox1.Location = new System.Drawing.Point(475, 36);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(292, 25);
+            this.textBox1.TabIndex = 4;
+            this.textBox1.Text = "Search for something...";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.BtnDieux1);
+            this.panel2.Controls.Add(this.nomDieu1);
+            this.panel2.Controls.Add(this.ImageDieux1);
+            this.panel2.Location = new System.Drawing.Point(96, 135);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(198, 246);
+            this.panel2.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel3.Controls.Add(this.BtnDieux4);
+            this.panel3.Controls.Add(this.NomDieux4);
+            this.panel3.Controls.Add(this.ImageDieux4);
+            this.panel3.Location = new System.Drawing.Point(96, 432);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(198, 246);
+            this.panel3.TabIndex = 7;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel4.Controls.Add(this.BtnDieux2);
+            this.panel4.Controls.Add(this.ImageDieu2);
+            this.panel4.Controls.Add(this.nomDieu2);
+            this.panel4.Location = new System.Drawing.Point(333, 135);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(198, 246);
+            this.panel4.TabIndex = 7;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel5.Controls.Add(this.BtnDieux3);
+            this.panel5.Controls.Add(this.nomDieux3);
+            this.panel5.Controls.Add(this.ImageDieux3);
+            this.panel5.Location = new System.Drawing.Point(569, 135);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(198, 246);
+            this.panel5.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel6.Controls.Add(this.BtnDieux5);
+            this.panel6.Controls.Add(this.nomDieux5);
+            this.panel6.Controls.Add(this.ImageDieux5);
+            this.panel6.Location = new System.Drawing.Point(333, 432);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(198, 246);
+            this.panel6.TabIndex = 7;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.panel7.Controls.Add(this.BtnDieux6);
+            this.panel7.Controls.Add(this.NomDieux6);
+            this.panel7.Controls.Add(this.ImageDieux6);
+            this.panel7.Location = new System.Drawing.Point(569, 432);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(198, 246);
+            this.panel7.TabIndex = 7;
+            // 
+            // ImageDieux1
+            // 
+            this.ImageDieux1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImageDieux1.BackgroundImage")));
+            this.ImageDieux1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ImageDieux1.Location = new System.Drawing.Point(41, 31);
+            this.ImageDieux1.Name = "ImageDieux1";
+            this.ImageDieux1.Size = new System.Drawing.Size(112, 97);
+            this.ImageDieux1.TabIndex = 0;
+            this.ImageDieux1.TabStop = false;
+            // 
+            // nomDieu1
+            // 
+            this.nomDieu1.AutoSize = true;
+            this.nomDieu1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomDieu1.ForeColor = System.Drawing.Color.White;
+            this.nomDieu1.Location = new System.Drawing.Point(73, 147);
+            this.nomDieu1.Name = "nomDieu1";
+            this.nomDieu1.Size = new System.Drawing.Size(46, 20);
+            this.nomDieu1.TabIndex = 1;
+            this.nomDieu1.Text = "Ares";
+            // 
+            // BtnDieux1
+            // 
+            this.BtnDieux1.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDieux1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDieux1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux1.FlatAppearance.BorderSize = 2;
+            this.BtnDieux1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDieux1.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDieux1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux1.Location = new System.Drawing.Point(41, 186);
+            this.BtnDieux1.Name = "BtnDieux1";
+            this.BtnDieux1.Size = new System.Drawing.Size(112, 37);
+            this.BtnDieux1.TabIndex = 2;
+            this.BtnDieux1.Text = "VOTE !";
+            this.BtnDieux1.UseVisualStyleBackColor = false;
+            this.BtnDieux1.MouseEnter += new System.EventHandler(this.BtnDieux1_MouseEnter);
+            this.BtnDieux1.MouseLeave += new System.EventHandler(this.BtnDieux1_MouseLeave);
+            // 
+            // BtnDieux3
+            // 
+            this.BtnDieux3.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDieux3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDieux3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux3.FlatAppearance.BorderSize = 2;
+            this.BtnDieux3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDieux3.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDieux3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux3.Location = new System.Drawing.Point(43, 182);
+            this.BtnDieux3.Name = "BtnDieux3";
+            this.BtnDieux3.Size = new System.Drawing.Size(112, 37);
+            this.BtnDieux3.TabIndex = 5;
+            this.BtnDieux3.Text = "VOTE !";
+            this.BtnDieux3.UseVisualStyleBackColor = false;
+            // 
+            // nomDieux3
+            // 
+            this.nomDieux3.AutoSize = true;
+            this.nomDieux3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomDieux3.ForeColor = System.Drawing.Color.White;
+            this.nomDieux3.Location = new System.Drawing.Point(57, 147);
+            this.nomDieux3.Name = "nomDieux3";
+            this.nomDieux3.Size = new System.Drawing.Size(83, 20);
+            this.nomDieux3.TabIndex = 4;
+            this.nomDieux3.Text = "Poséidon";
+            // 
+            // ImageDieux3
+            // 
+            this.ImageDieux3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImageDieux3.BackgroundImage")));
+            this.ImageDieux3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ImageDieux3.Location = new System.Drawing.Point(43, 27);
+            this.ImageDieux3.Name = "ImageDieux3";
+            this.ImageDieux3.Size = new System.Drawing.Size(112, 97);
+            this.ImageDieux3.TabIndex = 3;
+            this.ImageDieux3.TabStop = false;
+            // 
+            // BtnDieux4
+            // 
+            this.BtnDieux4.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDieux4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDieux4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux4.FlatAppearance.BorderSize = 2;
+            this.BtnDieux4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDieux4.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDieux4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux4.Location = new System.Drawing.Point(43, 182);
+            this.BtnDieux4.Name = "BtnDieux4";
+            this.BtnDieux4.Size = new System.Drawing.Size(112, 37);
+            this.BtnDieux4.TabIndex = 5;
+            this.BtnDieux4.Text = "VOTE !";
+            this.BtnDieux4.UseVisualStyleBackColor = false;
+            // 
+            // NomDieux4
+            // 
+            this.NomDieux4.AutoSize = true;
+            this.NomDieux4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomDieux4.ForeColor = System.Drawing.Color.White;
+            this.NomDieux4.Location = new System.Drawing.Point(64, 143);
+            this.NomDieux4.Name = "NomDieux4";
+            this.NomDieux4.Size = new System.Drawing.Size(67, 20);
+            this.NomDieux4.TabIndex = 4;
+            this.NomDieux4.Text = "Athéna";
+            // 
+            // ImageDieux4
+            // 
+            this.ImageDieux4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImageDieux4.BackgroundImage")));
+            this.ImageDieux4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ImageDieux4.Location = new System.Drawing.Point(43, 27);
+            this.ImageDieux4.Name = "ImageDieux4";
+            this.ImageDieux4.Size = new System.Drawing.Size(112, 97);
+            this.ImageDieux4.TabIndex = 3;
+            this.ImageDieux4.TabStop = false;
+            // 
+            // BtnDieux5
+            // 
+            this.BtnDieux5.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDieux5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDieux5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux5.FlatAppearance.BorderSize = 2;
+            this.BtnDieux5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDieux5.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDieux5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux5.Location = new System.Drawing.Point(43, 182);
+            this.BtnDieux5.Name = "BtnDieux5";
+            this.BtnDieux5.Size = new System.Drawing.Size(112, 37);
+            this.BtnDieux5.TabIndex = 5;
+            this.BtnDieux5.Text = "VOTE !";
+            this.BtnDieux5.UseVisualStyleBackColor = false;
+            // 
+            // nomDieux5
+            // 
+            this.nomDieux5.AutoSize = true;
+            this.nomDieux5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomDieux5.ForeColor = System.Drawing.Color.White;
+            this.nomDieux5.Location = new System.Drawing.Point(58, 143);
+            this.nomDieux5.Name = "nomDieux5";
+            this.nomDieux5.Size = new System.Drawing.Size(78, 20);
+            this.nomDieux5.TabIndex = 4;
+            this.nomDieux5.Text = "Déméter";
+            // 
+            // ImageDieux5
+            // 
+            this.ImageDieux5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImageDieux5.BackgroundImage")));
+            this.ImageDieux5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ImageDieux5.Location = new System.Drawing.Point(43, 27);
+            this.ImageDieux5.Name = "ImageDieux5";
+            this.ImageDieux5.Size = new System.Drawing.Size(112, 97);
+            this.ImageDieux5.TabIndex = 3;
+            this.ImageDieux5.TabStop = false;
+            // 
+            // BtnDieux6
+            // 
+            this.BtnDieux6.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDieux6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDieux6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux6.FlatAppearance.BorderSize = 2;
+            this.BtnDieux6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDieux6.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDieux6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux6.Location = new System.Drawing.Point(43, 182);
+            this.BtnDieux6.Name = "BtnDieux6";
+            this.BtnDieux6.Size = new System.Drawing.Size(112, 37);
+            this.BtnDieux6.TabIndex = 5;
+            this.BtnDieux6.Text = "VOTE !";
+            this.BtnDieux6.UseVisualStyleBackColor = false;
+            // 
+            // NomDieux6
+            // 
+            this.NomDieux6.AutoSize = true;
+            this.NomDieux6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NomDieux6.ForeColor = System.Drawing.Color.White;
+            this.NomDieux6.Location = new System.Drawing.Point(70, 143);
+            this.NomDieux6.Name = "NomDieux6";
+            this.NomDieux6.Size = new System.Drawing.Size(70, 20);
+            this.NomDieux6.TabIndex = 4;
+            this.NomDieux6.Text = "Artémis";
+            // 
+            // ImageDieux6
+            // 
+            this.ImageDieux6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImageDieux6.BackgroundImage")));
+            this.ImageDieux6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ImageDieux6.Location = new System.Drawing.Point(43, 27);
+            this.ImageDieux6.Name = "ImageDieux6";
+            this.ImageDieux6.Size = new System.Drawing.Size(112, 97);
+            this.ImageDieux6.TabIndex = 3;
+            this.ImageDieux6.TabStop = false;
+            // 
+            // BtnDieux2
+            // 
+            this.BtnDieux2.BackColor = System.Drawing.Color.Transparent;
+            this.BtnDieux2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnDieux2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux2.FlatAppearance.BorderSize = 2;
+            this.BtnDieux2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnDieux2.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnDieux2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnDieux2.Location = new System.Drawing.Point(43, 186);
+            this.BtnDieux2.Name = "BtnDieux2";
+            this.BtnDieux2.Size = new System.Drawing.Size(112, 37);
+            this.BtnDieux2.TabIndex = 5;
+            this.BtnDieux2.Text = "VOTE !";
+            this.BtnDieux2.UseVisualStyleBackColor = false;
+            // 
+            // nomDieu2
+            // 
+            this.nomDieu2.AutoSize = true;
+            this.nomDieu2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomDieu2.ForeColor = System.Drawing.Color.White;
+            this.nomDieu2.Location = new System.Drawing.Point(75, 147);
+            this.nomDieu2.Name = "nomDieu2";
+            this.nomDieu2.Size = new System.Drawing.Size(46, 20);
+            this.nomDieu2.TabIndex = 4;
+            this.nomDieu2.Text = "Ares";
+            // 
+            // ImageDieu2
+            // 
+            this.ImageDieu2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ImageDieu2.BackgroundImage")));
+            this.ImageDieu2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ImageDieu2.Location = new System.Drawing.Point(43, 31);
+            this.ImageDieu2.Name = "ImageDieu2";
+            this.ImageDieu2.Size = new System.Drawing.Size(112, 97);
+            this.ImageDieu2.TabIndex = 3;
+            this.ImageDieu2.TabStop = false;
             // 
             // Form1
             // 
@@ -289,7 +621,24 @@ namespace InfluxDB
             ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RArrow)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVDieux)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieux6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImageDieu2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -308,7 +657,31 @@ namespace InfluxDB
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox Close;
         public System.Windows.Forms.Panel pnl_Nav;
-        private System.Windows.Forms.DataGridView DGVDieux;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button BtnDieux1;
+        private System.Windows.Forms.Label nomDieu1;
+        private System.Windows.Forms.PictureBox ImageDieux1;
+        private System.Windows.Forms.Button BtnDieux6;
+        private System.Windows.Forms.Label NomDieux6;
+        private System.Windows.Forms.PictureBox ImageDieux6;
+        private System.Windows.Forms.Button BtnDieux5;
+        private System.Windows.Forms.Label nomDieux5;
+        private System.Windows.Forms.PictureBox ImageDieux5;
+        private System.Windows.Forms.Button BtnDieux3;
+        private System.Windows.Forms.Label nomDieux3;
+        private System.Windows.Forms.PictureBox ImageDieux3;
+        private System.Windows.Forms.Button BtnDieux2;
+        private System.Windows.Forms.PictureBox ImageDieu2;
+        private System.Windows.Forms.Label nomDieu2;
+        private System.Windows.Forms.Button BtnDieux4;
+        private System.Windows.Forms.Label NomDieux4;
+        private System.Windows.Forms.PictureBox ImageDieux4;
     }
 }
 

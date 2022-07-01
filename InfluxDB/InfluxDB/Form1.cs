@@ -27,9 +27,7 @@ namespace InfluxDB
             pnl_Nav.Top = Btn_Dashboard.Top;
             pnl_Nav.Left = Btn_Dashboard.Left;
             Btn_Dashboard.BackColor = Color.FromArgb(46, 51, 73);
-            DGVDieux.AllowUserToAddRows = false;
-            DGVDieux.ColumnCount = 3;
-            DGVDieux.RowCount = 6;
+
 
             for(int i = 0; i < deity.Length; i++)
             {
@@ -149,7 +147,7 @@ namespace InfluxDB
 
         private void Close_MouseEnter(object sender, EventArgs e)
         {
-            Zoom(sender, 34, 38);
+            Zoom(sender, 28, 32);
         }
 
 
@@ -161,7 +159,7 @@ namespace InfluxDB
 
         private void Close_MouseLeave(object sender, EventArgs e)
         {
-            Zoom(sender, 28, 32);
+            Zoom(sender, 21, 26);
         }
 
         private void Btn_Dashboard_Click(object sender, EventArgs e)
@@ -201,8 +199,16 @@ namespace InfluxDB
             btn_Settings.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        
+        private void BtnDieux1_MouseEnter(object sender, EventArgs e)
+        {
+            BtnDieux1.BackColor = Color.FromArgb(234, 147, 51);
+            BtnDieux1.ForeColor = Color.White;
+        }
 
-        
+        private void BtnDieux1_MouseLeave(object sender, EventArgs e)
+        {
+            BtnDieux1.BackColor = Color.Transparent;
+            BtnDieux1.ForeColor = Color.FromArgb(234, 147, 51);
+        }
     }
 }
