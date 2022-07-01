@@ -19,25 +19,21 @@ namespace InfluxDB
         public Form1()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            InitializeComponent();
             FormBorderStyle = FormBorderStyle.None;
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 20, 20));
         }
 
+
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
-       (
-           int nLeftRect,     // x-coordinate of upper-left corner
-           int nTopRect,      // y-coordinate of upper-left corner
-           int nRightRect,    // x-coordinate of lower-right corner
-           int nBottomRect,   // y-coordinate of lower-right corner
-           int nWidthEllipse, // width of ellipse
-           int nHeightEllipse // height of ellipse
-       );
+        (
+            int nLeftRect,     // x-coordinate of upper-left corner
+            int nTopRect,      // y-coordinate of upper-left corner
+            int nRightRect,    // x-coordinate of lower-right corner
+            int nBottomRect,   // y-coordinate of lower-right corner
+            int nWidthEllipse, // width of ellipse
+            int nHeightEllipse // height of ellipse
+        );
 
 
         private void splitContainer1_MouseMove(object sender, MouseEventArgs e)
@@ -107,7 +103,86 @@ namespace InfluxDB
 
         private void btn_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
+        }
+
+        private void RArrow_MouseEnter(object sender, EventArgs e)
+        {
+            Zoom(sender, 48, 46);
+        }
+
+        private void RArrow_MouseLeave(object sender, EventArgs e)
+        {
+            Zoom(sender, 44, 42);
+        }
+
+        private void pictureBox2_MouseEnter(object sender, EventArgs e)
+        {
+            Zoom(sender, 48, 46);
+        }
+
+        private void pictureBox2_MouseLeave(object sender, EventArgs e)
+        {
+            Zoom(sender, 44, 42);
+        }
+
+        private void Close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void Close_MouseEnter(object sender, EventArgs e)
+        {
+            Zoom(sender, 34, 38);
+        }
+
+
+        public void Zoom(object sender,int height,int width)
+        {
+            PictureBox img = sender as PictureBox;
+            img.Size = new Size(height, width);
+        }
+
+        private void Close_MouseLeave(object sender, EventArgs e)
+        {
+            Zoom(sender, 28, 32);
+        }
+
+        private void Btn_Dashboard_Click(object sender, EventArgs e)
+        {
+            pnl_Nav.Height = Btn_Dashboard.Height;
+            pnl_Nav.Top = Btn_Dashboard.Top;
+            pnl_Nav.Left = Btn_Dashboard.Left;
+            Btn_Dashboard.BackColor = Color.FromArgb(46,51,73);
+        }
+
+        private void btn_Stat_Click(object sender, EventArgs e)
+        {
+            pnl_Nav.Height = btn_Stat.Height;
+            pnl_Nav.Top = btn_Stat.Top;
+            btn_Stat.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
+        private void btn_Settings_Click(object sender, EventArgs e)
+        {
+            pnl_Nav.Height = btn_Settings.Height;
+            pnl_Nav.Top = btn_Settings.Top;
+            btn_Settings.BackColor = Color.FromArgb(46, 51, 73);
+        }
+
+        private void Btn_Dashboard_Leave(object sender, EventArgs e)
+        {
+            Btn_Dashboard.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btn_Stat_Leave(object sender, EventArgs e)
+        {
+            btn_Stat.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btn_Settings_Leave(object sender, EventArgs e)
+        {
+            btn_Settings.BackColor = Color.FromArgb(24, 30, 54);
         }
     }
 }
