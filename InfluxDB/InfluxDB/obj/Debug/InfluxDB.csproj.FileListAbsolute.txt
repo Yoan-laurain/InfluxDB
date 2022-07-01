@@ -8,3 +8,13 @@ C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\InfluxDB.e
 C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\InfluxDB.pdb
 C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.exe
 C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.pdb
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\bin\Debug\InfluxDB.exe.config
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\bin\Debug\InfluxDB.exe
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\bin\Debug\InfluxDB.pdb
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.Form1.resources
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.Properties.Resources.resources
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.csproj.GenerateResource.cache
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.csproj.CoreCompileInputs.cache
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.exe
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.pdb
+D:\Natoshiro\Documents\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.csproj.AssemblyReference.cache
