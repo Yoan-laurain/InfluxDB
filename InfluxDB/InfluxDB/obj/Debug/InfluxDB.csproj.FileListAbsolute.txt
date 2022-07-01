@@ -1,0 +1,10 @@
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.csproj.AssemblyReference.cache
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.Form1.resources
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.Properties.Resources.resources
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.csproj.GenerateResource.cache
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.csproj.CoreCompileInputs.cache
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\InfluxDB.exe.config
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\InfluxDB.exe
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\InfluxDB.pdb
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.exe
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.pdb
