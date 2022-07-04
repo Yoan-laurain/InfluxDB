@@ -1,0 +1,613 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Coravel</name>
+    </assembly>
+    <members>
+        <member name="T:Coravel.CacheServiceRegistration">
+            <summary>
+            IServiceCollection extensions for registering Coravel's Caching.
+            </summary>
+        </member>
+        <member name="M:Coravel.CacheServiceRegistration.AddCache(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register Coravel's in memory caching.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Coravel.CacheServiceRegistration.AddCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,Coravel.Cache.Interfaces.ICache)">
+            <summary>
+            Register Coravel's caching using the specified caching driver.
+            </summary>
+            <param name="services"></param>
+            <param name="driver"></param>
+        </member>
+        <member name="M:Coravel.CacheServiceRegistration.AddCache(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Func{System.IServiceProvider,Coravel.Cache.Interfaces.ICache})">
+            <summary>
+            Register Coravel's caching using the specified caching driver.
+            </summary>
+            <param name="services"></param>
+            <param name="driverFunc"></param>
+        </member>
+        <member name="T:Coravel.Events.Dispatcher">
+            <summary>
+            Will dispatch Coravel events and broadcast them to the appropriate listeners.
+             </summary>
+        </member>
+        <member name="M:Coravel.Events.Dispatcher.Register``1">
+            <summary>
+            Register an event. You may subscribe listeners to this event by further chaining.
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Events.Dispatcher.Broadcast``1(``0)">
+            <summary>
+             Broadcasts an event to be handled by it's subscribed listeners.
+            </summary>
+            <param name="toBroadcast"></param>
+            <typeparam name="TEvent"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Events.EventSubscription`1">
+            <summary>
+            Represents an event subscription.
+            </summary>
+        </member>
+        <member name="M:Coravel.Events.EventSubscription`1.Subscribe``1">
+            <summary>
+            Subscribe a listener to an event.
+            </summary>
+            <typeparam name="TListener"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Events.Interfaces.IDispatcher">
+            <summary>
+            Dispatcher will dispatch Coravel events and broadcast them to the appropriate listeners.
+            </summary>
+        </member>
+        <member name="M:Coravel.Events.Interfaces.IDispatcher.Broadcast``1(``0)">
+            <summary>
+            Dispatches and broadcasts the event to all subscribed listeners.
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+        </member>
+        <member name="T:Coravel.Events.Interfaces.IEvent">
+            <summary>
+            Represents a class that can be dispatched as a Coravel event.
+            </summary>
+        </member>
+        <member name="M:Coravel.Events.Interfaces.IEventRegistration.Register``1">
+            <summary>
+            Register a new event for Coravel's Dispatcher.
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Invocable.IInvocable">
+            <summary>
+            Represents some action in your system that can be invoked by various
+            parts of Coravel. 
+            
+            For example, you may schedule or queue an invocable class
+            to be instantiated by the service container when due or dequeued.
+            </summary>
+        </member>
+        <member name="M:Coravel.Invocable.IInvocable.Invoke">
+            <summary>
+            Execute the logic/code for this invocable instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.QueueServiceRegistration">
+            <summary>
+            IServiceCollection extensions for registering Coravel's Queuing.
+            </summary>
+        </member>
+        <member name="M:Coravel.QueueServiceRegistration.AddQueue(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register Coravel's queueing.
+            </summary>
+            <param name="services">Service collection</param>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Queuing.Interfaces.IQueue">
+            <summary>
+            Allows queuing tasks that will be invoked automatically by Coravel for you.
+            </summary>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueue.QueueTask(System.Action)">
+            <summary>
+            Queue a new synchronous task.
+            </summary>
+            <param name="workItem">The task to be invoke by Coravel.</param>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueue.QueueAsyncTask(System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            Queue a new async task.
+            </summary>
+            <param name="asyncItem">The async task to be invoke by Coravel.</param>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueue.QueueInvocable``1">
+            <summary>
+            Queue an invocable that, when dequeued, will be instantiated using DI and invoked.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueue.QueueCancellableInvocable``1">
+            <summary>
+            Queue an invocable that, when dequeued, will be instantiated using DI and invoked.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueue.QueueBroadcast``1(``0)">
+            <summary>
+            Queue an event to be broadcasted.
+            </summary>
+            <typeparam name="TEvent"></typeparam>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueue.QueueInvocableWithPayload``2(``1)">
+            <summary>
+            Queue an invocable that will be given the payload supplied to this method.
+            </summary>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueue.GetMetrics">
+            <summary>
+            View metrics given the queue's current executing state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Queuing.Interfaces.IQueueConfiguration">
+            <summary>
+            Methods for configuring various aspects of Coravel's queue.
+            </summary>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueueConfiguration.OnError(System.Action{System.Exception})">
+            <summary>
+            Global error handler.
+            Invoked by Coravel whenever a queued task throws an Exception.
+            </summary>
+            <param name="errorHandler">The error handler you wish to use.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Queuing.Interfaces.IQueueConfiguration.LogQueuedTaskProgress(Microsoft.Extensions.Logging.ILogger{Coravel.Queuing.Interfaces.IQueue})">
+            <summary>
+            Log the progress of queued tasks.
+            </summary>
+            <param name="logger"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.SchedulerServiceRegistration">
+            <summary>
+            IServiceCollection extensions for registering Coravel's Scheduler.
+            </summary>
+        </member>
+        <member name="M:Coravel.SchedulerServiceRegistration.AddScheduler(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register Coravel's Scheduler.
+            </summary>
+            <param name="services">Service collection</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionComplexPart.CheckIfTimeIsDue(System.Int32)">
+            <summary>
+            From the cron expression, get all the int values that are valid due times.
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionComplexPart.CheckIsSpecifiedInt(System.String,System.Int32)">
+            <summary>
+            Get value from a cron expression with a single value.
+            </summary>
+            <param name="expression"></param>
+            <param name="toCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionComplexPart.CheckDelineatedArray(System.String,System.Int32)">
+            <summary>
+            Get values from cron expression like '5,4,3'.
+            </summary>
+            <param name="expression"></param>
+            <param name="toCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionComplexPart.CheckRange(System.String,System.Int32)">
+            <summary>
+            Get values from cron expression range (e.g.true '5-10').
+            </summary>
+            <param name="expression"></param>
+            <param name="toCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionComplexPart.CheckDivisibleRange(System.String,System.Int32)">
+            <summary>
+            Get values from cron expression range that has a divisor (e.g.true '5-10/2').
+            </summary>
+            <param name="expression"></param>
+            <param name="toCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionComplexPart.IsBetween(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all int between (including) min and max.
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <param name="toCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionComplexPart.IsBetweenSkipping(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all int between (including) min and max when the number is divisible by the divisor.
+            </summary>
+            <param name="min"></param>
+            <param name="max"></param>
+            <param name="skip"></param>
+            <param name="toCheck"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Scheduling.Schedule.Cron.CronExpressionPart">
+            <summary>
+            Represents a cron expression "part" parser needed for determining when events ought to be due.
+            </summary>
+        </member>
+        <member name="F:Coravel.Scheduling.Schedule.Cron.CronExpressionPart._expression">
+            <summary>
+            The cron expression used to determine when events are due.
+            </summary>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionPart.IsDue(System.Int32)">
+            <summary>
+            Based on the cron expression, is this DateTime due?
+            </summary>
+            <param name="time"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Cron.CronExpressionPart.CronExpressionPartIsDue(System.Int32,System.String,System.Int32)">
+            <summary>
+            Generic method to check if a part of the cron expression is due.
+            </summary>
+            <param name="time"></param>
+            <param name="expression"></param>
+            <param name="replaceZeroWith"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Scheduling.Schedule.Interfaces.IMutex">
+            <summary>
+            Abstraction for locking scheduled events so 
+            they may detect overlapping executions etc.
+            </summary>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IMutex.TryGetLock(System.String,System.Int32)">
+            <summary>
+            Attempt to get a lock for the given key. 
+            If true, lock is available and was granted.
+            If false, lock is still in use by another.
+            </summary>
+            <param name="key"></param>
+            <param name="timeoutMinutes"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IMutex.Release(System.String)">
+            <summary>
+            Release the hold of a lock for a given key.
+            </summary>
+            <param name="key"></param>
+        </member>
+        <member name="T:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration">
+            <summary>
+            Provides methods for configuring how a scheduled event behaves.
+            This contains all public facing configuration methods - i.e. this defines the 
+            fluent api for the scheduled events.
+            </summary>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Monday">
+            <summary>
+            Restrict task to run on Mondays.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Tuesday">
+            <summary>
+            Restrict task to run on Tuesdays.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Wednesday">
+            <summary>
+            Restrict task to run on Wednesdays.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Thursday">
+            <summary>
+            Restrict task to run on Thursdays.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Friday">
+            <summary>
+            Restrict task to run on Fridays.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Saturday">
+            <summary>
+            Restrict task to run on Saturdays.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Sunday">
+            <summary>
+            Restrict task to run on Sundays.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Weekday">
+            <summary>
+            Restrict task to run on weekdays (Monday - Friday).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.Weekend">
+            <summary>
+            Restrict task to run on weekends (Saturday and Sunday).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.PreventOverlapping(System.String)">
+            <summary>
+            If this event has not completed from the last time it was invoked, and is due again,
+            it will be prevented from running.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.When(System.Func{System.Threading.Tasks.Task{System.Boolean}})">
+            <summary>
+            Restrict scheduled task to run only when result of <paramref name="predicate"/> is true.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduledEventConfiguration.RunOnceAtStart">
+            <summary>
+            Run this scheduled event on the first "tick" at application startup.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval">
+            <summary>
+            Defines methods available to you for specifying
+            the frequency of how often your
+            scheduled tasks will run.
+            </summary>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryMinute">
+            <summary>
+            Scheduled task runs every minute.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryFiveMinutes">
+            <summary>
+            Scheduled task runs every five minutes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryTenMinutes">
+            <summary>
+            Scheduled task runs every ten minutes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryFifteenMinutes">
+            <summary>
+            Scheduled task runs every fifteen minutes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryThirtyMinutes">
+            <summary>
+            Scheduled task runs every thirty minutes.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.Hourly">
+            <summary>
+            Scheduled task runs once an hour.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.HourlyAt(System.Int32)">
+            <summary>
+            Scheduled task runs once an hour, but only at the time specified.
+            </summary>
+            <example>
+            HourlyAt(14); // Will run once an hour at xx:14.
+            </example>
+            <param name="minute">Minute each hour that task will run.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.Daily">
+            <summary>
+            Scheduled task runs once a day.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.DailyAtHour(System.Int32)">
+            <summary>
+            Scheduled task runs once a day at the hour specified.
+            </summary>
+            <example>
+            DailyAtHour(13); // Run task daily at 1 pm utc.
+            </example>
+            <param name="hour">Task only runs at this hour.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.DailyAt(System.Int32,System.Int32)">
+            <summary>
+            Scheduled task runs once a day at the time specified.
+            </summary>
+            <example>
+            DailyAt(13, 01); // Run task daily at 1:01 pm utc.
+            </example>
+            <param name="hour">Task only runs at this hour.</param>
+            <param name="minute">Task only runs at time with this minute.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.Weekly">
+            <summary>
+            Scheduled task runs once a week.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.Cron(System.String)">
+            <summary>
+            Schedule an event from a basic cron expression.
+            Supported values for expression parts are:
+            - "*"
+            - "5"
+            - "5,6,7"
+            - "5-10"
+            - "*/10"
+            
+            For example "* * * * 0" would schedule an event to run every minute on Sundays.
+            </summary>
+            <param name="cronExpression"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EverySecond">
+            <summary>
+            Scheduled task runs once a second.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryFiveSeconds">
+            <summary>
+            Scheduled task runs once every five seconds.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryTenSeconds">
+            <summary>
+            Scheduled task runs once every ten seconds.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryFifteenSeconds">
+            <summary>
+            Scheduled task runs once every fifteen seconds.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EveryThirtySeconds">
+            <summary>
+            Scheduled task runs once every thirty seconds.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduleInterval.EverySeconds(System.Int32)">
+            <summary>
+            Scheduled task runs once every N seconds.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Scheduling.Schedule.Interfaces.IScheduler">
+            <summary>
+            Provides methods for scheduling tasks using Coravel.
+            </summary>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduler.Schedule(System.Action)">
+            <summary>
+            Schedule a task.
+            </summary>
+            <param name="actionToSchedule">Task to schedule.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduler.ScheduleAsync(System.Func{System.Threading.Tasks.Task})">
+            <summary>
+            Schedule an asynchronous task.
+            </summary>
+            <param name="asyncTaskToSchedule">Async task to schedule.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduler.Schedule``1">
+            <summary>
+            Schedule an Invocable job.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduler.ScheduleWithParams``1(System.Object[])">
+            <summary>
+            Schedule an Invocable job with a list of parameters.
+            Parameters are injected into the constructor of the Invocable while remaining dependencies are resolved from DI.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="parameters">Parameters to inject.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduler.ScheduleInvocableType(System.Type)">
+            <summary>
+            Schedule an Invocable job.
+            InvocableType param must be assignable from and implement the IInvocable interface.
+            </summary>
+            <param name="invocableType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.IScheduler.OnWorker(System.String)">
+            <summary>
+            Begin scheduling further tasks on an isolated worker.
+            A worker will run all scheduled tasks on it's own separate thread.
+            </summary>
+            <param name="workerName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Scheduling.Schedule.Interfaces.ISchedulerConfiguration">
+            <summary>
+            Methods for configuring various aspects of Coravel's scheduler.
+            </summary>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.ISchedulerConfiguration.OnError(System.Action{System.Exception})">
+            <summary>
+            Global error handler invoked whenever a scheduled task throws an exception.
+            </summary>
+            <param name="onError">Error handler to invoke on error.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Interfaces.ISchedulerConfiguration.LogScheduledTaskProgress(Microsoft.Extensions.Logging.ILogger{Coravel.Scheduling.Schedule.Interfaces.IScheduler})">
+            <summary>
+            Log the progress of scheduled tasks.
+            </summary>
+            <param name="logger"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Coravel.Scheduling.Schedule.Interfaces.IUtcTime">
+            <summary>
+            Abstractions for grabbing the current UTC time.
+            </summary>
+        </member>
+        <member name="P:Coravel.Scheduling.Schedule.Interfaces.IUtcTime.Now">
+            <summary>
+            Get UTC time right now.
+            </summary>
+            <value></value>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Mutex.InMemoryMutex.Using(Coravel.Scheduling.Schedule.Interfaces.IUtcTime)">
+            <summary>
+            Used to override the default usage of DateTime.UtcNow.
+            </summary>
+            <param name="time"></param>
+        </member>
+        <member name="M:Coravel.Scheduling.Schedule.Scheduler.RunWorkersAt(System.DateTime,System.Boolean)">
+            <summary>
+            This will grab all the scheduled tasks and combine each task into it's assigned "worker".
+            Each worker runs on it's own thread and will process it's assigned scheduled tasks asynchronously.
+            This method return a list of active tasks (one per worker - which needs to be awaited).
+            </summary>
+            <param name="utcDate"></param>
+            <param name="isFirstTick"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
