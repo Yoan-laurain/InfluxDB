@@ -17,7 +17,7 @@ Projet d'intégration et de présentation d' InfluxDB
 
 ## Prérequies :
 
-Serveur Debian11 ou Ubuntu20 ( à jour )
+- Serveur Debian11 ou Ubuntu20 ( à jour )
 
 ## Installation :
 
@@ -33,5 +33,13 @@ Ou depuis le package (DPKG):
 Activation des services : 
 1. `sudo systemctl start influxdb`
 2. `sudo systemctl enable influxdb`
--- On vérifie que le service tourne --
+- On vérifie que le service tourne
 3. `sudo systemctl status influxdb`
+
+Setup des utilisateurs et d'une base de donnée :
+1. `influx setup`
+2. Rentrez les informations dans l'ordre : ( Username, Password, PassAgain, Organisation, Bucket( base de donnée),  type of time '0' ) 
+3. `influx auth list`
+- Enregistrer le token sera utile plus tard 
+
+5. 
