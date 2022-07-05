@@ -15,7 +15,7 @@ Projet d'intégration et de présentation d' InfluxDB
 
 ## Setup :
 
-- Depuis l'interface WEB : `http://localhost:8086` 
+#### Depuis l'interface WEB : `http://localhost:8086` 
 
 
 # Tuto d'installation sur Linux/Debian 11/Ubuntu20 (pour utilisation serveur)
@@ -43,11 +43,11 @@ Activation des services :
 
 ## Setup :
 
-- En ligne de commande :
+#### En ligne de commande :
 1. `influx setup`
 2. Rentrez les informations dans l'ordre : ( Username, Password, PassAgain, Organisation, Bucket( base de donnée),  type of time '0' ) 
 3. `influx auth list`
 - Enregistrer le token sera utile plus tard 
 
-- Depuis l'interface Web : `http://<ipdevotreserveur>:8086` 
+#### Depuis l'interface Web : `http://<ipdevotreserveur>:8086` 
 
