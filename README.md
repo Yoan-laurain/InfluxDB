@@ -1,19 +1,19 @@
 Projet d'intégration et de présentation d' InfluxDB
 ===================================================
 
-*** Tuto d'installation Docker 
-** Prérequies :
+# Tuto d'installation Docker 
+## Prérequies :
       * Docker ou Docker Desktop d'installer sur la machine 
       * WSL2 installer 
       
-** Installation :
+# Installation :
       * ``` docker pull influxdb:2.0.7 ```
       * ``` docker run --name influxdb -p 8086:8086 influxdb:2.0.7 ```
       
-*** Tuto d'installation sur Linux/Debian 11/Ubuntu20 (pour utilisation serveur)
-** Prérequies :
+# Tuto d'installation sur Linux/Debian 11/Ubuntu20 (pour utilisation serveur)
+## Prérequies :
       * Serveur Debian11 ou Ubuntu20 ( à jour )
-** Installation :
+## Installation :
       * Ajout dépôts (APT): 
                        1. ``` wget -q https://repos.influxdata.com/influxdb.key ``` 
                        2. ``` echo '23a1c8836f0afc5ed24e0486339d7cc8f6790b83886c4c96995b88a061c5bb5d influxdb.key' | sha256sum -c && cat influxdb.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/influxdb.gpg > /dev/null ```
