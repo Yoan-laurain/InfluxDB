@@ -471,6 +471,7 @@ namespace InfluxDB
             this.BtnDieux4.TabIndex = 5;
             this.BtnDieux4.Text = "VOTE !";
             this.BtnDieux4.UseVisualStyleBackColor = false;
+            this.BtnDieux4.Click += new System.EventHandler(this.BtnDieux4_Click_1);
             // 
             // NomDieux4
             // 

@@ -40,27 +40,6 @@ namespace InfluxDB
 
         }
 
-        public async void Read()
-        {
-            InfluxDBService _service = new InfluxDBService();
-
-            var results = await _service.QueryAsync(async query =>
-            {
-                var flux = "from(bucket:\"data\") |> range(start: 0)";
-                var tables = await query.QueryAsync(flux, "IUT");
-
-                return tables.SelectMany(table =>
-                   table.Records.Select(record =>
-                       new Dieux(record.GetValue().ToString(), record.GetTime().ToString())));
-            });
-
-            foreach (var deus in results)
-            {
-                Console.WriteLine("Nom : " + deus.nom + " time : " + deus.time);
-            }
-
-        }
-
         public void Write(string nom)
         {
             InfluxDBService _service = new InfluxDBService();
@@ -266,6 +245,11 @@ namespace InfluxDB
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void BtnDieux4_Click_1(object sender, EventArgs e)
+        {
+            Write("Athéna");
         }
     }
 }

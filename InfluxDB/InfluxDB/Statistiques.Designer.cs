@@ -93,6 +93,7 @@ namespace InfluxDB
             this.splitContainer1.Panel2.Controls.Add(this.GRPDieux);
             this.splitContainer1.Panel2.Controls.Add(this.Close);
             this.splitContainer1.Panel2.Controls.Add(this.Titre);
+            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel2_MouseDown);
             this.splitContainer1.Panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel2_MouseMove);
             this.splitContainer1.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel2_MouseUp);
@@ -168,6 +169,7 @@ namespace InfluxDB
             this.Btn_Dashboard.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.Btn_Dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.Btn_Dashboard.UseVisualStyleBackColor = true;
+            this.Btn_Dashboard.Click += new System.EventHandler(this.Btn_Dashboard_Click_1);
             // 
             // panel1
             // 
