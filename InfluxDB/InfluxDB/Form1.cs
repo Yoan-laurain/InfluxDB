@@ -40,25 +40,15 @@ namespace InfluxDB
 
         private void BtnDieux1_Click(object sender, EventArgs e)
         {
-            Read();
-            /*InfluxDBService _service = new InfluxDBService();
-            _service.Write(write =>
-            {
-                var point = PointData.Measurement("Dieux")
-                    .Tag("Test", "test")
-                    .Field("value", "Ares")
-                    .Timestamp(DateTime.UtcNow, WritePrecision.Ns);
+            Write("Arès");
 
-                write.WritePoint(point, "InitialDB", "IUT");
-            });*/
         }
 
         public async void Read()
         {
             InfluxDBService _service = new InfluxDBService();
 
-
-            var results = await _service.QueryAsync(async query => 
+            var results = await _service.QueryAsync(async query =>
             {
                 var flux = "from(bucket:\"InitialDB\") |> range(start: 0)";
                 var tables = await query.QueryAsync(flux, "IUT");
@@ -68,11 +58,49 @@ namespace InfluxDB
                        new Dieux(record.GetValue().ToString(), record.GetTime().ToString())));
             });
 
-            foreach( var deus in results)
+            foreach (var deus in results)
             {
                 Console.WriteLine("Nom : " + deus.nom + " time : " + deus.time);
             }
 
+        }
+
+        public void Write(string nom)
+        {
+            InfluxDBService _service = new InfluxDBService();
+            _service.Write(write =>
+            {
+                var point = PointData.Measurement("Dieux")
+                    .Field("value", nom)
+                    .Timestamp(DateTime.UtcNow, WritePrecision.Ns);
+
+                write.WritePoint(point, "InitialDB", "IUT");
+            });
+        }
+
+        private void BtnDieux2_Click(object sender, EventArgs e)
+        {
+            Write("Héra");
+        }
+
+        private void BtnDieux3_Click(object sender, EventArgs e)
+        {
+            Write("Poséidon");
+        }
+
+        private void BtnDieux4_Click(object sender, EventArgs e)
+        {
+            Write("Athéna");
+        }
+
+        private void BtnDieux5_Click(object sender, EventArgs e)
+        {
+            Write("Déméter");
+        }
+
+        private void BtnDieux6_Click(object sender, EventArgs e)
+        {
+            Write("Artémis");
         }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
@@ -95,11 +123,6 @@ namespace InfluxDB
         {
             mouseDown = true;
             lastLocation = e.Location;
-        }
-
-        private void splitContainer1_Panel2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void splitContainer1_Panel2_MouseMove(object sender, MouseEventArgs e)
@@ -205,6 +228,9 @@ namespace InfluxDB
             pnl_Nav.Height = btn_Stat.Height;
             pnl_Nav.Top = btn_Stat.Top;
             btn_Stat.BackColor = Color.FromArgb(46, 51, 73);
+            Statistiques myStat = new Statistiques();
+            this.Hide();
+            myStat.Show();
         }
 
         private void btn_Settings_Click(object sender, EventArgs e)
@@ -241,5 +267,9 @@ namespace InfluxDB
             BtnDieux1.ForeColor = Color.FromArgb(234, 147, 51);
         }
 
-	}
+        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+    }
 }

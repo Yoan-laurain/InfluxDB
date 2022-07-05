@@ -101,3 +101,4 @@ C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\Microsoft.
 C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\Microsoft.AspNetCore.Http.Features.xml
 C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\Microsoft.AspNetCore.Mvc.Abstractions.xml
 C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\bin\Debug\Microsoft.AspNetCore.Routing.Abstractions.xml
+C:\Users\Yoan laurain\Desktop\C#\InfluxDB\InfluxDB\InfluxDB\obj\Debug\InfluxDB.Statistiques.resources
