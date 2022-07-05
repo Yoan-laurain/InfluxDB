@@ -7,11 +7,16 @@ Projet d'intégration et de présentation d' InfluxDB
 - Docker ou Docker Desktop d'installer sur la machine 
 - WSL2 installer 
       
-# Installation :
+## Installation :
 
 1. `docker pull influxdb:2.0.7`
 
 2. `docker run --name influxdb -p 8086:8086 influxdb:2.0.7` 
+
+## Setup :
+
+- Depuis l'interface WEB : `http://localhost:8086` 
+
 
 # Tuto d'installation sur Linux/Debian 11/Ubuntu20 (pour utilisation serveur)
 
@@ -36,10 +41,13 @@ Activation des services :
 - On vérifie que le service tourne
 3. `sudo systemctl status influxdb`
 
-Setup des utilisateurs et d'une base de donnée :
+## Setup :
+
+- En ligne de commande :
 1. `influx setup`
 2. Rentrez les informations dans l'ordre : ( Username, Password, PassAgain, Organisation, Bucket( base de donnée),  type of time '0' ) 
 3. `influx auth list`
 - Enregistrer le token sera utile plus tard 
 
-5. 
+- Depuis l'interface Web : `http://<ipdevotreserveur>:8086` 
+
