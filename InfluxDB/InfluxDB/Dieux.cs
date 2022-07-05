@@ -9,15 +9,15 @@ namespace InfluxDB
     class Dieux
     {
         public string nom;
-        public string time;
+        public DateTime time;
 
-        public Dieux(string nom, string time)
+        public Dieux(string nom, DateTime time)
         {
             this.nom = nom;
             this.time = time;
         }
 
         public string Nom { get => nom; set => nom = value; }
-        public string Time { get => time; set => time = value; }
+        public DateTime Time { get => time; set => time = value; }
     }
 }
