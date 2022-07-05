@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Coravel;
+using Coravel.Invocable;
+using InfluxDB.app.Services;
+using InfluxDB.Client.Api.Domain;
+using InfluxDB.Client.Writes;
+using Microsoft.AspNetCore.Mvc;
 
 namespace InfluxDB
 {
@@ -16,7 +18,6 @@ namespace InfluxDB
         private bool mouseDown;
         private Point lastLocation;
         private String[] deity = new String[] { "Zeus", "Héra", "Poséidon", "Athéna", "Arès", "Déméter", "Apollon", "Artémis", "Héphaïstos", "Aphrodite", "Hermès", "Hestia", "Dionysos" };
-
 
         public Form1()
         {
@@ -29,14 +30,50 @@ namespace InfluxDB
             Btn_Dashboard.BackColor = Color.FromArgb(46, 51, 73);
 
 
-            for(int i = 0; i < deity.Length; i++)
+            for (int i = 0; i < deity.Length; i++)
             {
-                
+
             }
 
 
         }
 
+        private void BtnDieux1_Click(object sender, EventArgs e)
+        {
+            Read();
+            /*InfluxDBService _service = new InfluxDBService();
+            _service.Write(write =>
+            {
+                var point = PointData.Measurement("Dieux")
+                    .Tag("Test", "test")
+                    .Field("value", "Ares")
+                    .Timestamp(DateTime.UtcNow, WritePrecision.Ns);
+
+                write.WritePoint(point, "InitialDB", "IUT");
+            });*/
+        }
+
+        public async void Read()
+        {
+            InfluxDBService _service = new InfluxDBService();
+
+
+            var results = await _service.QueryAsync(async query => 
+            {
+                var flux = "from(bucket:\"InitialDB\") |> range(start: 0)";
+                var tables = await query.QueryAsync(flux, "IUT");
+
+                return tables.SelectMany(table =>
+                   table.Records.Select(record =>
+                       new Dieux(record.GetValue().ToString(), record.GetTime().ToString())));
+            });
+
+            foreach( var deus in results)
+            {
+                Console.WriteLine("Nom : " + deus.nom + " time : " + deus.time);
+            }
+
+        }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -48,12 +85,6 @@ namespace InfluxDB
             int nWidthEllipse, // width of ellipse
             int nHeightEllipse // height of ellipse
         );
-
-
-        private void splitContainer1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
 
         private void splitContainer1_MouseUp(object sender, MouseEventArgs e)
         {
@@ -150,7 +181,6 @@ namespace InfluxDB
             Zoom(sender, 28, 32);
         }
 
-
         public void Zoom(object sender,int height,int width)
         {
             PictureBox img = sender as PictureBox;
@@ -210,5 +240,6 @@ namespace InfluxDB
             BtnDieux1.BackColor = Color.Transparent;
             BtnDieux1.ForeColor = Color.FromArgb(234, 147, 51);
         }
-    }
+
+	}
 }
