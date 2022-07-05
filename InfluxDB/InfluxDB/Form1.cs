@@ -2,14 +2,10 @@
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Coravel;
-using Coravel.Invocable;
 using InfluxDB.app.Services;
 using InfluxDB.Client.Api.Domain;
 using InfluxDB.Client.Writes;
-using Microsoft.AspNetCore.Mvc;
 
 namespace InfluxDB
 {
@@ -53,7 +49,7 @@ namespace InfluxDB
                     .Field("value", nom)
                     .Timestamp(DateTime.UtcNow, WritePrecision.Ns);
 
-                write.WritePoint(point, "InitialDB", "IUT");
+                write.WritePoint(point, "data", "IUT");
             });
         }
 

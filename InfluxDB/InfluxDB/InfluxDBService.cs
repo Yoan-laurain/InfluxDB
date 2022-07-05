@@ -9,7 +9,8 @@ namespace InfluxDB
     {
         public class InfluxDBService
         {
-            private readonly string _token = "tJbAwoN6Jd26K-w7TRSAkOo6FWFv4GVpiYky2cGLqYAjKnBZeOG9s1JEeEA-rR8MGaFgrjrrUtRlobGsTkxkxA==";
+            private readonly string _url = "http://api.sudododevelopers.xyz:8086/";
+            private readonly string _token = "24kmVoDNYb4Kz6B_at4OUOCyMEwx3am_KprTxUcI6PqkekDsiLLfro0aNepZ4-xINIFklTfyuQ33YLq1h2949w==";
 
             /*public InfluxDBService(IConfiguration configuration)
             {
@@ -18,15 +19,14 @@ namespace InfluxDB
 
             public void Write(Action<WriteApi> action)
             {
-                var client = InfluxDBClientFactory.Create("http://localhost:8086", _token);
+                var client = InfluxDBClientFactory.Create(_url, _token);
                 var write = client.GetWriteApi();
                 action(write);
-                Console.WriteLine("ICI");
             }
 
             public async Task<T> QueryAsync<T>(Func<QueryApi, Task<T>> action)
             {
-                var client = InfluxDBClientFactory.Create("http://localhost:8086", _token);
+                var client = InfluxDBClientFactory.Create(_url, _token);
                 var query = client.GetQueryApi();
                 return await action(query);
             }
