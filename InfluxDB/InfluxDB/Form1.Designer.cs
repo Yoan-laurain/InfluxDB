@@ -160,7 +160,6 @@ namespace InfluxDB
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 1;
             this.splitContainer1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_MouseDown);
-            this.splitContainer1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_MouseMove);
             this.splitContainer1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_MouseUp);
             // 
             // pnl_Nav
