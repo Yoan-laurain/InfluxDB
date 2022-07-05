@@ -2,14 +2,10 @@
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Coravel;
-using Coravel.Invocable;
 using InfluxDB.app.Services;
 using InfluxDB.Client.Api.Domain;
 using InfluxDB.Client.Writes;
-using Microsoft.AspNetCore.Mvc;
 
 namespace InfluxDB
 {
@@ -50,7 +46,7 @@ namespace InfluxDB
 
             var results = await _service.QueryAsync(async query =>
             {
-                var flux = "from(bucket:\"InitialDB\") |> range(start: 0)";
+                var flux = "from(bucket:\"data\") |> range(start: 0)";
                 var tables = await query.QueryAsync(flux, "IUT");
 
                 return tables.SelectMany(table =>
@@ -74,7 +70,7 @@ namespace InfluxDB
                     .Field("value", nom)
                     .Timestamp(DateTime.UtcNow, WritePrecision.Ns);
 
-                write.WritePoint(point, "InitialDB", "IUT");
+                write.WritePoint(point, "data", "IUT");
             });
         }
 
