@@ -30,10 +30,9 @@ namespace InfluxDB
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statistiques));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pnl_Nav = new System.Windows.Forms.Panel();
             this.btn_Settings = new System.Windows.Forms.Button();
@@ -42,22 +41,22 @@ namespace InfluxDB
             this.panel1 = new System.Windows.Forms.Panel();
             this.Zeus = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Close = new System.Windows.Forms.PictureBox();
-            this.Titre = new System.Windows.Forms.Label();
-            this.GRPDieux = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.cbxDieux1 = new System.Windows.Forms.ComboBox();
-            this.LBLDieux1 = new System.Windows.Forms.Label();
+            this.BtnProcess = new System.Windows.Forms.Button();
             this.LBLDieux2 = new System.Windows.Forms.Label();
             this.cbxDieux2 = new System.Windows.Forms.ComboBox();
-            this.BtnProcess = new System.Windows.Forms.Button();
+            this.LBLDieux1 = new System.Windows.Forms.Label();
+            this.cbxDieux1 = new System.Windows.Forms.ComboBox();
+            this.GRPDieux = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.Close = new System.Windows.Forms.PictureBox();
+            this.Titre = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRPDieux)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Close)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -204,77 +203,22 @@ namespace InfluxDB
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Close
+            // BtnProcess
             // 
-            this.Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Close.BackgroundImage")));
-            this.Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Close.Location = new System.Drawing.Point(799, 50);
-            this.Close.Margin = new System.Windows.Forms.Padding(2);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(21, 26);
-            this.Close.TabIndex = 3;
-            this.Close.TabStop = false;
-            this.Close.Click += new System.EventHandler(this.Close_Click_1);
-            // 
-            // Titre
-            // 
-            this.Titre.AutoSize = true;
-            this.Titre.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titre.ForeColor = System.Drawing.Color.Silver;
-            this.Titre.Location = new System.Drawing.Point(26, 38);
-            this.Titre.Name = "Titre";
-            this.Titre.Size = new System.Drawing.Size(205, 39);
-            this.Titre.TabIndex = 0;
-            this.Titre.Text = "Statistiques";
-            // 
-            // GRPDieux
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.GRPDieux.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.GRPDieux.Legends.Add(legend3);
-            this.GRPDieux.Location = new System.Drawing.Point(33, 192);
-            this.GRPDieux.Name = "GRPDieux";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series6.Legend = "Legend1";
-            series6.Name = "Series2";
-            this.GRPDieux.Series.Add(series5);
-            this.GRPDieux.Series.Add(series6);
-            this.GRPDieux.Size = new System.Drawing.Size(787, 419);
-            this.GRPDieux.TabIndex = 4;
-            this.GRPDieux.Text = "chart1";
-            // 
-            // cbxDieux1
-            // 
-            this.cbxDieux1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.cbxDieux1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxDieux1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxDieux1.ForeColor = System.Drawing.Color.White;
-            this.cbxDieux1.FormattingEnabled = true;
-            this.cbxDieux1.Location = new System.Drawing.Point(141, 135);
-            this.cbxDieux1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            this.cbxDieux1.Name = "cbxDieux1";
-            this.cbxDieux1.Size = new System.Drawing.Size(195, 33);
-            this.cbxDieux1.TabIndex = 5;
-            // 
-            // LBLDieux1
-            // 
-            this.LBLDieux1.AutoSize = true;
-            this.LBLDieux1.BackColor = System.Drawing.Color.Transparent;
-            this.LBLDieux1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.LBLDieux1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLDieux1.ForeColor = System.Drawing.Color.Silver;
-            this.LBLDieux1.Location = new System.Drawing.Point(30, 135);
-            this.LBLDieux1.Name = "LBLDieux1";
-            this.LBLDieux1.Size = new System.Drawing.Size(105, 29);
-            this.LBLDieux1.TabIndex = 6;
-            this.LBLDieux1.Text = "Dieux 1 :";
+            this.BtnProcess.BackColor = System.Drawing.Color.Transparent;
+            this.BtnProcess.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnProcess.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnProcess.FlatAppearance.BorderSize = 2;
+            this.BtnProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProcess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
+            this.BtnProcess.Location = new System.Drawing.Point(708, 640);
+            this.BtnProcess.Name = "BtnProcess";
+            this.BtnProcess.Size = new System.Drawing.Size(112, 37);
+            this.BtnProcess.TabIndex = 9;
+            this.BtnProcess.Text = "Process !";
+            this.BtnProcess.UseVisualStyleBackColor = false;
+            this.BtnProcess.Click += new System.EventHandler(this.BtnDieux1_Click);
             // 
             // LBLDieux2
             // 
@@ -302,22 +246,70 @@ namespace InfluxDB
             this.cbxDieux2.TabIndex = 7;
             this.cbxDieux2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
-            // BtnProcess
+            // LBLDieux1
             // 
-            this.BtnProcess.BackColor = System.Drawing.Color.Transparent;
-            this.BtnProcess.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnProcess.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
-            this.BtnProcess.FlatAppearance.BorderSize = 2;
-            this.BtnProcess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnProcess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnProcess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(147)))), ((int)(((byte)(51)))));
-            this.BtnProcess.Location = new System.Drawing.Point(708, 640);
-            this.BtnProcess.Name = "BtnProcess";
-            this.BtnProcess.Size = new System.Drawing.Size(112, 37);
-            this.BtnProcess.TabIndex = 9;
-            this.BtnProcess.Text = "Process !";
-            this.BtnProcess.UseVisualStyleBackColor = false;
-            this.BtnProcess.Click += new System.EventHandler(this.BtnDieux1_Click);
+            this.LBLDieux1.AutoSize = true;
+            this.LBLDieux1.BackColor = System.Drawing.Color.Transparent;
+            this.LBLDieux1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.LBLDieux1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDieux1.ForeColor = System.Drawing.Color.Silver;
+            this.LBLDieux1.Location = new System.Drawing.Point(30, 135);
+            this.LBLDieux1.Name = "LBLDieux1";
+            this.LBLDieux1.Size = new System.Drawing.Size(105, 29);
+            this.LBLDieux1.TabIndex = 6;
+            this.LBLDieux1.Text = "Dieux 1 :";
+            // 
+            // cbxDieux1
+            // 
+            this.cbxDieux1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.cbxDieux1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxDieux1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxDieux1.ForeColor = System.Drawing.Color.White;
+            this.cbxDieux1.FormattingEnabled = true;
+            this.cbxDieux1.Location = new System.Drawing.Point(141, 135);
+            this.cbxDieux1.Margin = new System.Windows.Forms.Padding(0);
+            this.cbxDieux1.Name = "cbxDieux1";
+            this.cbxDieux1.Size = new System.Drawing.Size(195, 33);
+            this.cbxDieux1.TabIndex = 5;
+            // 
+            // GRPDieux
+            // 
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Name = "ChartArea1";
+            this.GRPDieux.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.GRPDieux.Legends.Add(legend1);
+            this.GRPDieux.Location = new System.Drawing.Point(33, 192);
+            this.GRPDieux.Name = "GRPDieux";
+            this.GRPDieux.Size = new System.Drawing.Size(787, 419);
+            this.GRPDieux.TabIndex = 4;
+            this.GRPDieux.Text = "chart1";
+            title1.Name = "Titre";
+            this.GRPDieux.Titles.Add(title1);
+            // 
+            // Close
+            // 
+            this.Close.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Close.BackgroundImage")));
+            this.Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Close.Location = new System.Drawing.Point(799, 50);
+            this.Close.Margin = new System.Windows.Forms.Padding(2);
+            this.Close.Name = "Close";
+            this.Close.Size = new System.Drawing.Size(21, 26);
+            this.Close.TabIndex = 3;
+            this.Close.TabStop = false;
+            this.Close.Click += new System.EventHandler(this.Close_Click_1);
+            // 
+            // Titre
+            // 
+            this.Titre.AutoSize = true;
+            this.Titre.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titre.ForeColor = System.Drawing.Color.Silver;
+            this.Titre.Location = new System.Drawing.Point(26, 38);
+            this.Titre.Name = "Titre";
+            this.Titre.Size = new System.Drawing.Size(205, 39);
+            this.Titre.TabIndex = 0;
+            this.Titre.Text = "Statistiques";
             // 
             // Statistiques
             // 
@@ -339,8 +331,8 @@ namespace InfluxDB
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GRPDieux)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Close)).EndInit();
             this.ResumeLayout(false);
 
         }
