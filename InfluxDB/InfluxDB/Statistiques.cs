@@ -38,6 +38,12 @@ namespace InfluxDB
             pnl_Nav.Left = btn_Stat.Left;
             btn_Stat.BackColor = Color.FromArgb(46, 51, 73);
 
+
+            
+            cbxDieux1.Style.EditorStyle.BorderColor = Color.FromArgb(37, 42, 64);
+            sfComboBox1.Style.EditorStyle.ForeColor = Color.Blue;
+            sfComboBox1.Style.EditorStyle.Font = new Font("Arial", 10F, FontStyle.Bold);
+
         }
 
         private void splitContainer1_MouseUp(object sender, MouseEventArgs e)
@@ -178,6 +184,29 @@ namespace InfluxDB
             btn_Settings.BackColor = Color.FromArgb(24, 30, 54);
         }
 
+        private void chart1_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void Close_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDieux1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
