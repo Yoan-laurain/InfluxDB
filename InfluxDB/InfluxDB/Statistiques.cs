@@ -68,11 +68,17 @@ namespace InfluxDB
 
 
             GRPDieux.ChartAreas[0].AxisX.Title = "Jours de la semaine";
+            GRPDieux.ChartAreas[0].AxisX.TitleForeColor = Color.White;
+            GRPDieux.ChartAreas[0].AxisX.LabelStyle.ForeColor = Color.White;
 
 
 
             GRPDieux.ChartAreas[0].AxisY.Title = "Votes";
+            GRPDieux.ChartAreas[0].AxisY.TitleForeColor = Color.White;
+            GRPDieux.ChartAreas[0].AxisY.LabelStyle.ForeColor = Color.White;
             GRPDieux.ChartAreas[0].AxisY.TextOrientation = TextOrientation.Horizontal;
+
+            
 
             Read(cbxDieux1.Text,cbxDieux2.Text);
         }

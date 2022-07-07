@@ -275,10 +275,16 @@ namespace InfluxDB
             // 
             // GRPDieux
             // 
+            this.GRPDieux.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             chartArea1.Area3DStyle.Enable3D = true;
             chartArea1.Name = "ChartArea1";
             this.GRPDieux.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.HeaderSeparatorColor = System.Drawing.Color.White;
+            legend1.ItemColumnSeparatorColor = System.Drawing.Color.White;
             legend1.Name = "Legend1";
+            legend1.TitleForeColor = System.Drawing.Color.White;
             this.GRPDieux.Legends.Add(legend1);
             this.GRPDieux.Location = new System.Drawing.Point(33, 192);
             this.GRPDieux.Name = "GRPDieux";
@@ -286,6 +292,7 @@ namespace InfluxDB
             this.GRPDieux.TabIndex = 4;
             this.GRPDieux.Text = "chart1";
             title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            title1.ForeColor = System.Drawing.Color.White;
             title1.Name = "Titre";
             this.GRPDieux.Titles.Add(title1);
             // 
