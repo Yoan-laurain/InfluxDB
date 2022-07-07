@@ -8,8 +8,8 @@ Projet d'intégration et de présentation d' InfluxDB
 
 - WSL2 installer 
 - Si jamais vous avez cette fenêtre d'erreur : 
-  IMAGE 
-  Tapez : `wsl --set-default-version 2` dans PowerShell 
+  ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/WSL2Impossible.png)
+- Tapez : `wsl --set-default-version 2` dans PowerShell 
       
 ## Installation :
 
