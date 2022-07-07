@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace InfluxDB
 {
@@ -40,18 +41,43 @@ namespace InfluxDB
             btn_Stat.BackColor = Color.FromArgb(46, 51, 73);
 
 
-            
+
             //cbxDieux1.Style.EditorStyle.BorderColor = Color.FromArgb(37, 42, 64);
             //sfComboBox1.Style.EditorStyle.ForeColor = Color.Blue;
             //sfComboBox1.Style.EditorStyle.Font = new Font("Arial", 10F, FontStyle.Bold);
 
-            GRPDieux.Titles["Titre"].Text = "Arès VS Athéna";
-            GRPDieux.Legends["Legend1"].Title = "Dieux";
+            cbxDieux1.Items.Add("Arès");
+            cbxDieux1.Items.Add("Héra");
+            cbxDieux1.Items.Add("Poséidon");
+            cbxDieux1.Items.Add("Athéna");
+            cbxDieux1.Items.Add("Déméter");
+            cbxDieux1.Items.Add("Artémis");
 
-            Read();
+            //-----------------------------------
+
+            cbxDieux2.Items.Add("Arès");
+            cbxDieux2.Items.Add("Héra");
+            cbxDieux2.Items.Add("Poséidon");
+            cbxDieux2.Items.Add("Athéna");
+            cbxDieux2.Items.Add("Déméter");
+            cbxDieux2.Items.Add("Artémis");
+
+            GRPDieux.Legends["Legend1"].Title = "Dieux";
+            cbxDieux1.SelectedIndex = 0;
+            cbxDieux2.SelectedIndex = 1;
+
+
+            GRPDieux.ChartAreas[0].AxisX.Title = "Jours de la semaine";
+
+
+
+            GRPDieux.ChartAreas[0].AxisY.Title = "Votes";
+            GRPDieux.ChartAreas[0].AxisY.TextOrientation = TextOrientation.Horizontal;
+
+            Read(cbxDieux1.Text,cbxDieux2.Text);
         }
 
-        public async void Read()
+        public async void Read(string nomDieu1,string nomDieu2)
         {
             InfluxDBService _service = new InfluxDBService();
 
@@ -65,9 +91,11 @@ namespace InfluxDB
                        new Dieux(record.GetValue().ToString(), Convert.ToDateTime(record.GetTime().ToString())  )));
             });
 
+            GRPDieux.Titles["Titre"].Text = nomDieu1 + " VS " + nomDieu2;
 
-            AddToGraph("Arès",results);
-            AddToGraph("Athéna",results);
+            
+            AddToGraph(nomDieu1, results);
+            AddToGraph(nomDieu2, results);
 
         }
 
@@ -265,30 +293,19 @@ namespace InfluxDB
             btn_Settings.BackColor = Color.FromArgb(24, 30, 54);
         }
 
-        private void GRPDieux_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Close_Click_1(object sender, EventArgs e)
         {
             Close();
         }
 
         private void label1_Click(object sender, EventArgs e) { }
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void BtnDieux1_Click(object sender, EventArgs e)
         {
-
+            string nomDieu1 = cbxDieux1.Text;
+            string nomDieu2 = cbxDieux2.Text;
+            GRPDieux.Series.Clear();
+            Read(nomDieu1, nomDieu2);
         }
         private void Btn_Dashboard_Click_1(object sender, EventArgs e)
         {
@@ -296,5 +313,6 @@ namespace InfluxDB
             Form1 myForm = new Form1();
             myForm.Show();
         }
+
     }
 }

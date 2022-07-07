@@ -37,7 +37,6 @@ namespace InfluxDB
         private void BtnDieux1_Click(object sender, EventArgs e)
         {
             Write("Arès");
-
         }
 
         public void Write(string nom)
@@ -58,25 +57,7 @@ namespace InfluxDB
             Write("Héra");
         }
 
-        private void BtnDieux3_Click(object sender, EventArgs e)
-        {
-            Write("Poséidon");
-        }
 
-        private void BtnDieux4_Click(object sender, EventArgs e)
-        {
-            Write("Athéna");
-        }
-
-        private void BtnDieux5_Click(object sender, EventArgs e)
-        {
-            Write("Déméter");
-        }
-
-        private void BtnDieux6_Click(object sender, EventArgs e)
-        {
-            Write("Artémis");
-        }
 
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -250,6 +231,26 @@ namespace InfluxDB
         private void BtnDieux4_Click_1(object sender, EventArgs e)
         {
             Write("Athéna");
+        }
+
+        private void BtnDieux6_Click_1(object sender, EventArgs e)
+        {
+            Write("Artémis");
+        }
+
+        private void BtnDieux5_Click(object sender, EventArgs e)
+        {
+            Write("Déméter");
+        }
+
+        private void BtnDieux3_Click(object sender, EventArgs e)
+        {
+            Write("Poséidon");
+        }
+
+        private void BtnDieux2_Click_1(object sender, EventArgs e)
+        {
+            Write("Héra");
         }
     }
 }

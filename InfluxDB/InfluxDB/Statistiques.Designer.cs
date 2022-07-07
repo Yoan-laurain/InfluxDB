@@ -92,7 +92,6 @@ namespace InfluxDB
             this.splitContainer1.Panel2.Controls.Add(this.GRPDieux);
             this.splitContainer1.Panel2.Controls.Add(this.Close);
             this.splitContainer1.Panel2.Controls.Add(this.Titre);
-            this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel2_MouseDown);
             this.splitContainer1.Panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel2_MouseMove);
             this.splitContainer1.Panel2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.splitContainer1_Panel2_MouseUp);
@@ -237,14 +236,15 @@ namespace InfluxDB
             // cbxDieux2
             // 
             this.cbxDieux2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.cbxDieux2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDieux2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxDieux2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxDieux2.ForeColor = System.Drawing.Color.White;
             this.cbxDieux2.FormattingEnabled = true;
             this.cbxDieux2.Location = new System.Drawing.Point(554, 135);
             this.cbxDieux2.Name = "cbxDieux2";
             this.cbxDieux2.Size = new System.Drawing.Size(195, 33);
             this.cbxDieux2.TabIndex = 7;
-            this.cbxDieux2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // LBLDieux1
             // 
@@ -262,6 +262,7 @@ namespace InfluxDB
             // cbxDieux1
             // 
             this.cbxDieux1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.cbxDieux1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxDieux1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxDieux1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxDieux1.ForeColor = System.Drawing.Color.White;
@@ -284,6 +285,7 @@ namespace InfluxDB
             this.GRPDieux.Size = new System.Drawing.Size(787, 419);
             this.GRPDieux.TabIndex = 4;
             this.GRPDieux.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             title1.Name = "Titre";
             this.GRPDieux.Titles.Add(title1);
             // 

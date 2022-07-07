@@ -279,6 +279,7 @@ namespace InfluxDB
             this.BtnDieux6.TabIndex = 5;
             this.BtnDieux6.Text = "VOTE !";
             this.BtnDieux6.UseVisualStyleBackColor = false;
+            this.BtnDieux6.Click += new System.EventHandler(this.BtnDieux6_Click_1);
             // 
             // NomDieux6
             // 
@@ -327,6 +328,7 @@ namespace InfluxDB
             this.BtnDieux5.TabIndex = 5;
             this.BtnDieux5.Text = "VOTE !";
             this.BtnDieux5.UseVisualStyleBackColor = false;
+            this.BtnDieux5.Click += new System.EventHandler(this.BtnDieux5_Click);
             // 
             // nomDieux5
             // 
@@ -375,6 +377,7 @@ namespace InfluxDB
             this.BtnDieux3.TabIndex = 5;
             this.BtnDieux3.Text = "VOTE !";
             this.BtnDieux3.UseVisualStyleBackColor = false;
+            this.BtnDieux3.Click += new System.EventHandler(this.BtnDieux3_Click);
             // 
             // nomDieux3
             // 
@@ -423,6 +426,7 @@ namespace InfluxDB
             this.BtnDieux2.TabIndex = 5;
             this.BtnDieux2.Text = "VOTE !";
             this.BtnDieux2.UseVisualStyleBackColor = false;
+            this.BtnDieux2.Click += new System.EventHandler(this.BtnDieux2_Click_1);
             // 
             // ImageDieu2
             // 
