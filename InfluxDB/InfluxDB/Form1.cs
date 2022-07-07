@@ -24,14 +24,6 @@ namespace InfluxDB
             pnl_Nav.Top = Btn_Dashboard.Top;
             pnl_Nav.Left = Btn_Dashboard.Left;
             Btn_Dashboard.BackColor = Color.FromArgb(46, 51, 73);
-
-
-            for (int i = 0; i < deity.Length; i++)
-            {
-
-            }
-
-
         }
 
         private void BtnDieux1_Click(object sender, EventArgs e)
@@ -221,11 +213,6 @@ namespace InfluxDB
         {
             BtnDieux1.BackColor = Color.Transparent;
             BtnDieux1.ForeColor = Color.FromArgb(234, 147, 51);
-        }
-
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void BtnDieux4_Click_1(object sender, EventArgs e)
