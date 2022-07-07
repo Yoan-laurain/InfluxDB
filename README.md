@@ -58,4 +58,9 @@ Activation des services :
 
 ## Initialisation depuis l'interface Web 
 
+![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/start_web.png)
+![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/user__init_web.png)
+![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/skip_web.png)
+![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/interface_web.png)
+
 
