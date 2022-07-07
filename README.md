@@ -6,8 +6,8 @@ Projet d'intégration et de présentation d' InfluxDB
 
 - Docker ou Docker Desktop d'installer sur la machine 
 
-- WSL2 installer : - ( Installation : https://docs.microsoft.com/fr-fr/windows/wsl/install )
-                   - ( Mise à jour : https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi )
+- WSL2 installer : * ( Installation : https://docs.microsoft.com/fr-fr/windows/wsl/install )
+                   * ( Mise à jour : https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi )
 - Si jamais vous avez cette fenêtre d'erreur : 
   ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/WSL2Impossible.png)
 - Tapez : `wsl --set-default-version 2` dans PowerShell 
