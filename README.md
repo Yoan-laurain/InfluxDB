@@ -4,11 +4,11 @@ Projet d'intégration et de présentation d' InfluxDB
 # Tuto d'installation Docker 
 ## Prérequis :
 
-- Docker ou Docker Desktop d'installer sur la machine 
+- Docker ou Docker Desktop d'installer sur la machine : https://www.docker.com/products/docker-desktop/
 
 - WSL2 installer : 
-- Installation : https://docs.microsoft.com/fr-fr/windows/wsl/install )
-- Mise à jour : https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi )
+. Installation : https://docs.microsoft.com/fr-fr/windows/wsl/install )
+. Mise à jour : https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi )
 
 - Si jamais vous avez cette fenêtre d'erreur : 
   ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/WSL2Impossible.png)
@@ -62,7 +62,9 @@ Activation des services :
 
 ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/start_web.png)
 ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/user__init_web.png)
-- Rentrer l'intégralité des champs
+
+Rentrer l'intégralité des champs
+
 ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/skip_web.png)
 ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/interface_web.png)
 
