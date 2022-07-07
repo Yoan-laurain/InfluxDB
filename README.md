@@ -2,7 +2,7 @@ Projet d'intégration et de présentation d' InfluxDB
 ===================================================
 
 # Tuto d'installation Docker 
-## Prérequies :
+## Prérequis :
 
 - Docker ou Docker Desktop d'installer sur la machine 
 
@@ -25,7 +25,7 @@ Projet d'intégration et de présentation d' InfluxDB
 
 # Tuto d'installation sur Linux/Debian 11/Ubuntu20 (pour utilisation serveur)
 
-## Prérequies :
+## Prérequis :
 
 - Serveur Debian11 ou Ubuntu20 ( à jour )
 
@@ -60,6 +60,7 @@ Activation des services :
 
 ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/start_web.png)
 ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/user__init_web.png)
+- Rentrer l'intégralité des champs
 ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/skip_web.png)
 ![alt-text](https://github.com/Yoan-laurain/InfluxDB/blob/main/Images/interface_web.png)
 
