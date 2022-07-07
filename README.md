@@ -5,7 +5,11 @@ Projet d'intégration et de présentation d' InfluxDB
 ## Prérequies :
 
 - Docker ou Docker Desktop d'installer sur la machine 
+
 - WSL2 installer 
+- Si jamais vous avez cette fenêtre d'erreur : 
+  IMAGE 
+  Tapez : `wsl --set-default-version 2` dans PowerShell 
       
 ## Installation :
 
@@ -50,4 +54,7 @@ Activation des services :
 - Enregistrer le token sera utile plus tard 
 
 #### Depuis l'interface Web : `http://<ipdevotreserveur>:8086` 
+
+## Initialisation depuis l'interface Web 
+
 
